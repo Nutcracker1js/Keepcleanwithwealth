@@ -539,7 +539,7 @@ window.addEventListener("resize", function () {
         Have a question or need urgent help? Reach us instantly below.
       </p>
       <div class="d-flex gap-2 flex-wrap justify-content-center">
-        <a href="mailto:Keepcleanwithwealth@gmail.com" class="btn px-3 py-2" style="background:#234567; color:#fff; border:none;">
+        <a href="mailto:info@keepcleanwithwealth.co.uk" class="btn px-3 py-2" style="background:#234567; color:#fff; border:none;">
           Email Us
         </a>
         <button onclick="smartsupp('chat:open')" class="btn px-3 py-2" style="background:#234567; color:#fff; border:none;">
@@ -569,22 +569,22 @@ window.addEventListener("resize", function () {
           <!-- testmonial-image -->
           <div class="testmonial-nav text-center">
             <div class="testmonial-thumb">
-              <img src="assets/img/person.png" alt="">
+              <img src="img/person.png" alt="">
             </div>
             <div class="testmonial-thumb">
-              <img src="assets/img/person.png" alt="">
+              <img src="img/person.png" alt="">
             </div>
             <div class="testmonial-thumb">
-              <img src="assets/img/person.png" alt="">
+              <img src="img/person.png" alt="">
             </div>
             <div class="testmonial-thumb">
-              <img src="assets/img/person.png" alt="">
+              <img src="img/person.png" alt="">
             </div>
             <div class="testmonial-thumb">
-              <img src="assets/img/person.png" alt="">
+              <img src="img/person.png" alt="">
             </div>
             <div class="testmonial-thumb">
-              <img src="assets/img/person.png" alt="">
+              <img src="img/person.png" alt="">
             </div>
           </div>
 
@@ -644,80 +644,8 @@ window.addEventListener("resize", function () {
   </div>
 </section>
 <!-- Testimonials_end -->
-        </main>
-        <!-- ? Review Section Start -->
-<section class="reviews py-5" style="background:#f9f9f9; margin-bottom:80px;">
-  <div class="container">
-    <div class="text-center mb-5">
-      <h2 class="fw-bold" style="color:#234567; font-size:2.5rem; font-weight:bold"> Drop a Review</h2>
-      <p style="color:#555; font-size:1.2rem;">We value your feedback! Share your thoughts below:</p>
-    </div>
-
-    <!-- Review Form -->
-    <div class="card shadow-sm border-0 rounded-4 p-4 mb-5" style="background:#fff; max-width:700px; margin:auto;">
-      <form id="reviewForm">
-        <div class="mb-3">
-          <label class="form-label fw-bold" style="color:#234567;">Your Name</label>
-          <input type="text" id="reviewName" class="form-control" placeholder="Enter your name" required>
-        </div>
-        <div class="mb-3">
-          <label class="form-label fw-bold" style="color:#234567;">Your Review</label>
-          <textarea id="reviewText" class="form-control" rows="4" placeholder="Write your review here..." required></textarea>
-        </div>
-        <button type="submit" class="btn px-4 py-2" style="background:#234567; color:#fff; border-radius:50px;">
-          Submit Review
-        </button>
-      </form>
-    </div>
-
-
-  </div>
-</section>
-<!-- ? Review Section End -->
-
-<!-- JavaScript to Handle Reviews -->
-<script>
-  const reviewForm = document.getElementById("reviewForm");
-  const reviewName = document.getElementById("reviewName");
-  const reviewText = document.getElementById("reviewText");
-  const reviewsContainer = document.getElementById("reviewsContainer");
-
-  // Load reviews from localStorage
-  let reviews = JSON.parse(localStorage.getItem("reviews")) || [];
-
-  function displayReviews() {
-    reviewsContainer.innerHTML = "";
-    reviews.forEach((review, index) => {
-      const li = document.createElement("li");
-      li.className = "list-group-item mb-3 shadow-sm rounded-3 p-3";
-      li.innerHTML = `
-        <strong style="color:#234567;">${review.name}</strong>
-        <p style="margin:5px 0; color:#555;">${review.text}</p>
-        <small style="color:#888;">Posted on ${review.date}</small>
-      `;
-      reviewsContainer.appendChild(li);
-    });
-  }
-
-  reviewForm.addEventListener("submit", (e) => {
-    e.preventDefault();
-    const newReview = {
-      name: reviewName.value,
-      text: reviewText.value,
-      date: new Date().toLocaleString()
-    };
-    reviews.unshift(newReview); // Add new review at the top
-    localStorage.setItem("reviews", JSON.stringify(reviews));
-    reviewName.value = "";
-    reviewText.value = "";
-    displayReviews();
-  });
-
-  // Display reviews on page load
-  displayReviews();
-</script>
-
-    <!-- Footer Section -->
+  <footer>
+        <!-- Footer Section -->
       <footer
         style="
           background: #2c3e50;
@@ -861,7 +789,7 @@ window.addEventListener("resize", function () {
       <script src="popper.min.js"></script>
       <script src="bootstrap.min.js"></script>
       <!-- Jquery Mobile Menu -->
-      <script src="assets/js/jquery.slicknav.min.js"></script>
+      <script src="jquery.slicknav.min.js"></script>
 
       <!-- Jquery Slick , Owl-Carousel Plugins -->
       <script src="owl.carousel.min.js"></script>
@@ -888,12 +816,12 @@ window.addEventListener("resize", function () {
       <!-- contact js -->
       <script src="contact.js"></script>
       <script src="jquery.form.js"></script>
-      <script src="./assets/js/jquery.validate.min.js"></script>
-      <script src="./assets/js/mail-script.js"></script>
-      <script src="./assets/js/jquery.ajaxchimp.min.js"></script>
+      <script src="jquery.validate.min.js"></script>
+      <script src="mail-script.js"></script>
+      <script src="jquery.ajaxchimp.min.js"></script>
 
       <!-- Jquery Plugins, main Jquery -->
-      <script src="./assets/js/plugins.js"></script>
-      <script src="./assets/js/main.js"></script>
+      <script src="plugins.js"></script>
+      <script src="main.js"></script>
     </body>
 </html>
